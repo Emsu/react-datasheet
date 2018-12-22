@@ -68,7 +68,7 @@ describe('Component', () => {
         )
 
         expect(wrapper.html()).toEqual(
-          shallow(<td className='test cell' colSpan={5} rowSpan={4} style={{ width: '200px' }}>
+          shallow(<td className='test cell' colSpan={5} rowSpan={4} style={{ minWidth: '200px' }}>
             <span className='value-viewer'>5</span>
           </td>).html())
 
@@ -267,17 +267,17 @@ describe('Component', () => {
         )
 
         expect(wrapper.html()).toEqual(
-          mount(<td className='test cell' colSpan={5} rowSpan={4} style={{width: '200px'}}>
+          mount(<td className='test cell' colSpan={5} rowSpan={4} style={{minWidth: '200px'}}>
             <div>HELLO</div>
           </td>).html())
         wrapper.setProps({cell: {...cell, forceComponent: false}})
         expect(wrapper.html()).toEqual(
-          mount(<td className='test cell' colSpan={5} rowSpan={4} style={{width: '200px'}}>
+          mount(<td className='test cell' colSpan={5} rowSpan={4} style={{minWidth: '200px'}}>
             <span className='value-viewer'>5</span>
           </td>).html())
         wrapper.setProps({ cell: {...cell, forceComponent: false, value: 7}})
         expect(wrapper.html()).toEqual(
-          mount(<td className='test cell updated' colSpan={5} rowSpan={4} style={{width: '200px'}}>
+          mount(<td className='test cell updated' colSpan={5} rowSpan={4} style={{minWidth: '200px'}}>
             <span className='value-viewer'>7</span>
           </td>).html())
         wrapper.simulate('mousedown')
