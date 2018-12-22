@@ -1,5 +1,5 @@
 {
-  "name": "react-datasheet",
+  "name": "@wokflow/react-datasheet",
   "version": "1.3.9",
   "description": "Excel-like data grid for React",
   "repository": {
