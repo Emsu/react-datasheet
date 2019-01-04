@@ -5,6 +5,7 @@ key String  undefined   By default, each cell is given the key of col number and
 className   String  undefined   Additional class names for cells.
 component   ReactElement    undefined   Insert a react element or JSX to this field. This will render on edit mode
 forceComponent  bool    false   Renders what's in component at all times, even when not in edit mode
+forceEditor  bool    false   Renders what's in the editor at all times, even when not in edit mode
 disableEvents   bool    false   Makes cell unselectable and read only
 colSpan number  1   The colSpan of the cell's td element
 rowSpan number  1   The rowSpan of the cell's td element
@@ -19,6 +20,7 @@ const CellShape = {
   className: PropTypes.string,
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   forceComponent: PropTypes.bool,
+  forceEditor: PropTypes.bool,
   disableEvents: PropTypes.bool,
   colSpan: PropTypes.number,
   rowSpan: PropTypes.number,
