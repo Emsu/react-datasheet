@@ -124,7 +124,9 @@ export default class DataSheet extends PureComponent {
   }
 
   pageClick(e) {
-    const element = this.dgDom;
+    // TODO: originally this was this.dgDom. Eventually want to switch
+    // to something configurable so clicking outside changes state to default state
+    const element = document.body; // this.dgDom;
     if (!element.contains(e.target)) {
       this.setState(this.defaultState);
       this.removeAllListeners();
